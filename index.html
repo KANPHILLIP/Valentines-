@@ -71,17 +71,6 @@ button {
   font-size: 16px;
   color: #444;
 }
-
-#whatsapp {
-  display: none;
-  margin-top: 15px;
-  background: #25D366;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 25px;
-  text-decoration: none;
-  display: inline-block;
-}
 </style>
 </head>
 
@@ -99,8 +88,6 @@ button {
   </div>
 
   <div id="message">Yay!! 💘 I can’t wait 🥰</div>
-
-  <a id="whatsapp" target="_blank">WhatsApp 💬 I said YES!</a>
 </div>
 
 <audio id="bgMusic" src="music.mp3" loop></audio>
@@ -109,7 +96,6 @@ button {
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const message = document.getElementById("message");
-const whatsapp = document.getElementById("whatsapp");
 const music = document.getElementById("bgMusic");
 
 // YES button
@@ -117,11 +103,7 @@ yesBtn.addEventListener("click", () => {
   message.style.display = "block";
   yesBtn.style.display = "none";
   noBtn.style.display = "none";
-  whatsapp.style.display = "inline-block";
   music.play();
-
-  const text = encodeURIComponent("I said YES! 💖 Happy Valentine’s Day 😘");
-  whatsapp.href = `https://wa.me/?text=${text}`;
 });
 
 // NO button escape
